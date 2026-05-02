@@ -19,7 +19,7 @@ const Login = () => {
   };
 
   const handleLogin = async () => {
-    // ✅ validation added back
+    
     if (!form.email || !form.password) {
       alert("Please fill all fields");
       return;
@@ -39,12 +39,12 @@ const Login = () => {
 
     } catch (err) {
       setSuccess(false);
-      alert(err.response?.data || "Login failed"); // ✅ better error
+      alert(err.response?.data || "Login failed");
     }
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-100 to-purple-200">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br bg-black">
       <div className="bg-white p-8 rounded-2xl shadow-xl w-80 flex flex-col gap-4">
 
         <h2 className="text-3xl font-bold text-center text-gray-800">
@@ -68,7 +68,7 @@ const Login = () => {
 
         <button
           onClick={handleLogin}
-          disabled={!form.email || !form.password} // ✅ disable button
+          disabled={!form.email || !form.password}
           className={`p-2 rounded-lg text-white transition duration-200 ${
             !form.email || !form.password
               ? "bg-gray-400 cursor-not-allowed"
