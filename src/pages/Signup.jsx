@@ -31,13 +31,13 @@ const Signup = () => {
       alert("Account created successfully");
       navigate("/");
     } catch (err) {
-      alert(err.response?.data || "Signup failed"); // ✅ better error
+      alert(err.response?.data || "Signup failed");
     }
   };
 
   return (
     <div className="min-h-screen flex justify-center items-center bg-gray-100">
-      <div className="bg-white p-6 rounded-xl shadow-lg w-80">
+      <div className="bg-black p-6 rounded-xl shadow-lg w-80">
         
         <h2 className="text-2xl font-bold mb-4 text-center">Sign Up</h2>
 
@@ -74,7 +74,7 @@ const Signup = () => {
 
         <button
           onClick={handleSignup}
-          disabled={!form.name || !form.email || !form.password} // ✅ disable logic
+          disabled={!form.name || !form.email || !form.password}
           className={`w-full py-2 rounded text-white ${
             !form.name || !form.email || !form.password
               ? "bg-gray-400 cursor-not-allowed"
