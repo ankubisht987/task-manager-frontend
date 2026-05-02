@@ -6,7 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import Signup from "./pages/Signup";
 const App = () => {
   return (
-    <div className='bg-black'>
+    <div>
       <Routes>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/" element={<Login />}/>
