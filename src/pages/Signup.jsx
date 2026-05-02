@@ -31,7 +31,7 @@ const Signup = () => {
       alert("Account created successfully");
       navigate("/");
     } catch (err) {
-      alert(err.response?.data || "Signup failed");
+      alert(err.response?.data || "Signup failed"); // ✅ better error
     }
   };
 
@@ -74,7 +74,7 @@ const Signup = () => {
 
         <button
           onClick={handleSignup}
-          disabled={!form.name || !form.email || !form.password}
+          disabled={!form.name || !form.email || !form.password} // ✅ disable logic
           className={`w-full py-2 rounded text-white ${
             !form.name || !form.email || !form.password
               ? "bg-gray-400 cursor-not-allowed"
